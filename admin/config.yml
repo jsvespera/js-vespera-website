@@ -10,88 +10,129 @@ collections:
     label: "Website-Inhalte"
     files:
       - name: "site"
-        label: "Hauptseite & Texte"
+        label: "Hauptseite & Seiten (von oben nach unten)"
         file: "content/site.json"
         format: "json"
         fields:
           # ==========================================
-          # 1. HEADER / NAVIGATION
+          # ABSCHNITT 1: GANZEN OBEN – HEADER & LOGO
           # ==========================================
-          - {label: "Header – Markenname / Logo (oben links, z.B. J.S. Vespera)", name: "brand_name", widget: "string", required: false}
+          - {label: "--- HEADER / MENÜBAR (GANZ OBEN) ---", name: "divider_header", widget: "hidden", required: false}
+          - {label: "1.01 Logo / Name ganz oben links (z.B. J.S. Vespera)", name: "brand_name", widget: "string", required: false}
 
           # ==========================================
-          # 2. STARTSEITE / HERO-BEREICH
+          # ABSCHNITT 2: STARTSEITE – BEREICH 1 (HERO / WILLKOMMEN)
           # ==========================================
-          - {label: "Hero – Kleine Akzentzeile oben (z.B. J.S. Vespera)", name: "home_accent", widget: "string", required: false}
-          - {label: "Hero – Erste Hauptüberschrift (z.B. Gefährliche Worte.)", name: "home_title", widget: "string", required: false}
-          - {label: "Hero – Zweite Hauptüberschrift (z.B. VERBOTENE WAHRHEITEN.)", name: "home_title_2", widget: "string", required: false}
-          - {label: "Hero – Einleitungstext / Absatz", name: "home_lead", widget: "text", required: false}
-          - {label: "Hero – Button Text (z.B. ENTDECKE MEINE WELT)", name: "home_button_text", widget: "string", required: false}
-          - {label: "Hero – Hintergrundbild", name: "hero_image", widget: "image", required: false}
+          - {label: "--- STARTSEITE: BEREICH 1 (WILLKOMMEN / HERO) ---", name: "divider_home_hero", widget: "hidden", required: false}
+          - {label: "1.02 Kleine Textzeile ganz oben (z.B. J.S. Vespera)", name: "home_accent", widget: "string", required: false}
+          - {label: "1.03 Große Hauptzeile 1 (z.B. Gefährliche Worte.)", name: "home_title", widget: "string", required: false}
+          - {label: "1.04 Große Hauptzeile 2 (z.B. VERBOTENE WAHRHEITEN.)", name: "home_title_2", widget: "string", required: false}
+          - {label: "1.05 Einleitungstext unter der Hauptzeile", name: "home_lead", widget: "text", required: false}
+          - {label: "1.06 Button-Beschriftung (z.B. ENTDECKE MEINE WELT)", name: "home_button_text", widget: "string", required: false}
+          - {label: "1.07 Hintergrundbild des Hauptbereichs", name: "hero_image", widget: "image", required: false}
 
           # ==========================================
-          # 3. STARTSEITE – ÜBER MICH TEASER / VORSCHAUKASTEN
+          # ABSCHNITT 3: STARTSEITE – BEREICH 2 (ÜBER MICH VORSCHAU)
           # ==========================================
-          - {label: "Startseite Über mich – Vorschautext (\"Geschichten haben mich schon immer...\")", name: "about_preview_text", widget: "text", required: false}
-          - {label: "Startseite Über mich – Badge 1 (z.B. Dark Romance & Thriller)", name: "about_badge_1", widget: "string", required: false}
-          - {label: "Startseite Über mich – Badge 2 (z.B. Persönliche Einblicke)", name: "about_badge_2", widget: "string", required: false}
-          - {label: "Startseite Über mich – Button Text (z.B. Mehr über mich)", name: "about_btn_text", widget: "string", required: false}
+          - {label: "--- STARTSEITE: BEREICH 2 (ÜBER MICH VORSCHAU) ---", name: "divider_home_about", widget: "hidden", required: false}
+          - {label: "2.01 Foto auf der linken Seite", name: "home_about_image", widget: "image", required: false}
+          - {label: "2.02 Kleine Kursiv-Zeile über der Überschrift (z.B. Über mich)", name: "home_about_subtitle", widget: "string", required: false}
+          - {label: "2.03 Große Überschrift (z.B. DIE WORTE HINTER DEN GESCHICHTEN.)", name: "home_about_title", widget: "string", required: false}
+          - {label: "2.04 Einleitungstext Absatz 1", name: "home_about_p1", widget: "text", required: false}
+          - {label: "2.05 Einleitungstext Absatz 2", name: "home_about_p2", widget: "text", required: false}
+          - {label: "2.06 Button-Beschriftung (z.B. MEHR ÜBER MICH)", name: "home_about_btn", widget: "string", required: false}
+          
+          # Die 4 Kacheln/Punkte rechts daneben:
+          - {label: "2.07 Kachel rechts 1 – Titel (z.B. Gefährliche Liebe)", name: "feature_1_title", widget: "string", required: false}
+          - {label: "2.08 Kachel rechts 1 – Text", name: "feature_1_text", widget: "text", required: false}
+          - {label: "2.09 Kachel rechts 2 – Titel (z.B. Starke Heldinnen)", name: "feature_2_title", widget: "string", required: false}
+          - {label: "2.10 Kachel rechts 2 – Text", name: "feature_2_text", widget: "text", required: false}
+          - {label: "2.11 Kachel rechts 3 – Titel (z.B. Morally Grey)", name: "feature_3_title", widget: "string", required: false}
+          - {label: "2.12 Kachel rechts 3 – Text", name: "feature_3_text", widget: "text", required: false}
+          - {label: "2.13 Kachel rechts 4 – Titel (z.B. Dunkel. Intensiv.)", name: "feature_4_title", widget: "string", required: false}
+          - {label: "2.14 Kachel rechts 4 – Text", name: "feature_4_text", widget: "text", required: false}
 
           # ==========================================
-          # 4. TAUCHE EIN IN MEINE WELT (DEADLY WORDS STARTSEITEN-SEKTION)
+          # ABSCHNITT 4: STARTSEITE – BEREICH 3 (BÜCHER-SEKTION)
           # ==========================================
-          - {label: "Bücher-Sektion – Hauptüberschrift (z.B. Tauche ein in meine Welt)", name: "section_books_title", widget: "string", required: false}
-          - {label: "Deadly Words – Startseite Buchtitel (z.B. Deadly Words)", name: "deadly_title", widget: "string", required: false}
-          - {label: "Deadly Words – Startseite Untertitel (z.B. Jedes Wort eine Lüge)", name: "deadly_subtitle", widget: "string", required: false}
-          - {label: "Deadly Words – Status-Badge (z.B. In Überarbeitung)", name: "deadly_status", widget: "string", required: false}
-          - {label: "Deadly Words – Erscheinungsdatum-Badge (z.B. Dez 2026)", name: "deadly_release_badge", widget: "string", required: false}
-          - {label: "Deadly Words – Startseite Kurz-Klappentext", name: "deadly_story", widget: "text", required: false}
-          - {label: "Deadly Words – Button Text (z.B. Mehr zum Buch)", name: "deadly_btn_text", widget: "string", required: false}
-          - {label: "Deadly Words – Cover-Bild Startseite", name: "deadly_cover", widget: "image", required: false}
+          - {label: "--- STARTSEITE: BEREICH 3 (TAUCHE EIN IN MEINE WELT) ---", name: "divider_home_books", widget: "hidden", required: false}
+          - {label: "3.01 Linker Bereich – Kleine Kursiv-Zeile (z.B. Meine Bücher)", name: "books_sec_sub", widget: "string", required: false}
+          - {label: "3.02 Linker Bereich – Überschrift (z.B. TAUCHE EIN IN MEINE WELT.)", name: "books_sec_title", widget: "string", required: false}
+          - {label: "3.03 Linker Bereich – Einleitungstext", name: "books_sec_text", widget: "text", required: false}
+          
+          # Buch-Karte in der Mitte:
+          - {label: "3.04 Mittlere Buchkarte – Badge oben (z.B. DEBÜTROMAN)", name: "home_book_badge", widget: "string", required: false}
+          - {label: "3.05 Mittlere Buchkarte – Buchtitel (z.B. DEADLY WORDS)", name: "home_book_title", widget: "string", required: false}
+          - {label: "3.06 Mittlere Buchkarte – Teaser-Text", name: "home_book_teaser", widget: "text", required: false}
+          - {label: "3.07 Mittlere Buchkarte – Button (z.B. MEHR ZUM BUCH)", name: "home_book_btn", widget: "string", required: false}
+          - {label: "3.08 Mittlere Buchkarte – Cover-Bild", name: "home_book_cover", widget: "image", required: false}
+
+          # Dunkler Zitat-Kasten rechts:
+          - {label: "3.09 Rechter Zitat-Kasten – Zitat-Text in Schreibschrift", name: "quote_box_text", widget: "text", required: false}
 
           # ==========================================
-          # 5. ÜBER DIE AUTORIN (DETAILS)
+          # ABSCHNITT 5: UNTERSEITE "ÜBER MICH" (EIGENE SEITE)
           # ==========================================
-          - {label: "Über mich – Überschrift (z.B. Über die Autorin)", name: "about_title", widget: "string", required: false}
-          - {label: "Über mich – Zitat / Einleitung", name: "about_intro", widget: "text", required: false}
-          - {label: "Über mich – Haupttext Absatz 1", name: "about_story", widget: "text", required: false}
-          - {label: "Über mich – Haupttext Absatz 2", name: "about_story_2", widget: "text", required: false}
-          - {label: "Über mich – Autorenfoto", name: "author_image", widget: "image", required: false}
+          - {label: "--- UNTERSEITE: ÜBER MICH (KOMPLETTE SEITE) ---", name: "divider_page_about", widget: "hidden", required: false}
+          # Oben der rote Header-Kasten:
+          - {label: "4.01 Roter Kasten ganz oben – Kleine Akzentzeile (z.B. DIE AUTORIN)", name: "about_header_badge", widget: "string", required: false}
+          - {label: "4.02 Roter Kasten ganz oben – Hauptüberschrift (z.B. Über mich)", name: "about_title", widget: "string", required: false}
+          - {label: "4.03 Roter Kasten ganz oben – Beschreibungstext", name: "about_intro", widget: "text", required: false}
+          
+          # Hauptbereich darunter (Foto + Vorstellungstext):
+          - {label: "4.04 Autorenfoto auf der linken Seite", name: "about_page_image", widget: "image", required: false}
+          - {label: "4.05 Text rechts neben Foto – Überschrift (z.B. Wer hinter J.S. Vespera steckt)", name: "about_bio_title", widget: "string", required: false}
+          - {label: "4.06 Text rechts neben Foto – Dein Vorstellungstext (Fließtext)", name: "about_story", widget: "text", required: false}
+
+          # Die 4 Themen-Karten ganz unten auf der Über-Mich-Seite:
+          - {label: "4.07 Karte 1 oben links – Titel (z.B. Mein Weg zum Schreiben)", name: "card_1_title", widget: "string", required: false}
+          - {label: "4.08 Karte 1 oben links – Text", name: "card_1_text", widget: "text", required: false}
+          - {label: "4.09 Karte 2 oben rechts – Titel (z.B. Meine Inspiration)", name: "card_2_title", widget: "string", required: false}
+          - {label: "4.10 Karte 2 oben rechts – Text", name: "card_2_text", widget: "text", required: false}
+          - {label: "4.11 Karte 3 unten links – Titel (z.B. Dark Romance)", name: "card_3_title", widget: "string", required: false}
+          - {label: "4.12 Karte 3 unten links – Text", name: "card_3_text", widget: "text", required: false}
+          - {label: "4.13 Karte 4 unten rechts – Titel (z.B. Meine Bücher)", name: "card_4_title", widget: "string", required: false}
+          - {label: "4.14 Karte 4 unten rechts – Text", name: "card_4_text", widget: "text", required: false}
 
           # ==========================================
-          # 6. TESTLESER
+          # ABSCHNITT 6: UNTERSEITE "TESTLESER"
           # ==========================================
-          - {label: "Testleser – Überschrift (z.B. Werde Testleser)", name: "beta_title", widget: "string", required: false}
-          - {label: "Testleser – Einleitungstext", name: "beta_intro", widget: "text", required: false}
-          - {label: "Testleser – Haupttext / Anforderung / Ablauf", name: "beta_body", widget: "text", required: false}
-          - {label: "Testleser – Button Text / Aktion (z.B. Jetzt bewerben)", name: "beta_btn_text", widget: "string", required: false}
+          - {label: "--- UNTERSEITE: TESTLESER ---", name: "divider_page_beta", widget: "hidden", required: false}
+          - {label: "5.01 Testleser – Überschrift", name: "beta_title", widget: "string", required: false}
+          - {label: "5.02 Testleser – Einleitungstext", name: "beta_intro", widget: "text", required: false}
+          - {label: "5.03 Testleser – Haupttext / Ablauf & Kriterien", name: "beta_body", widget: "text", required: false}
+          - {label: "5.04 Testleser – Button Text (z.B. Jetzt bewerben)", name: "beta_btn_text", widget: "string", required: false}
 
           # ==========================================
-          # 7. BLOGGER & KOOPERATIONEN
+          # ABSCHNITT 7: UNTERSEITE "BLOGGER & KOOPERATIONEN"
           # ==========================================
-          - {label: "Blogger – Überschrift (z.B. Blogger & Kooperationen)", name: "cooperation_title", widget: "string", required: false}
-          - {label: "Blogger – Einleitungstext", name: "cooperation_intro", widget: "text", required: false}
-          - {label: "Blogger – Haupttext / Kriterien & Infos", name: "cooperation_body", widget: "text", required: false}
-          - {label: "Blogger – Button Text (z.B. Anfrage senden)", name: "cooperation_btn_text", widget: "string", required: false}
+          - {label: "--- UNTERSEITE: BLOGGER & KOOPERATIONEN ---", name: "divider_page_coop", widget: "hidden", required: false}
+          - {label: "6.01 Blogger – Überschrift", name: "cooperation_title", widget: "string", required: false}
+          - {label: "6.02 Blogger – Einleitungstext", name: "cooperation_intro", widget: "text", required: false}
+          - {label: "6.03 Blogger – Haupttext / Infos", name: "cooperation_body", widget: "text", required: false}
+          - {label: "6.04 Blogger – Button Text (z.B. Anfrage senden)", name: "cooperation_btn_text", widget: "string", required: false}
 
           # ==========================================
-          # 8. KONTAKT & FOOTER
+          # ABSCHNITT 8: UNTERSEITE "KONTAKT" & FOOTER (GANZ UNTEN)
           # ==========================================
-          - {label: "Kontakt – Überschrift (z.B. Kontakt)", name: "contact_title", widget: "string", required: false}
-          - {label: "Kontakt – Einleitungstext", name: "contact_intro", widget: "text", required: false}
-          - {label: "Kontakt – E-Mail-Adresse", name: "contact_email", widget: "string", required: false}
-          - {label: "Social Media – Instagram URL", name: "instagram", widget: "string", required: false}
-          - {label: "Social Media – TikTok URL", name: "tiktok", widget: "string", required: false}
-          - {label: "Footer – Copyright Text (z.B. © 2026 J.S. Vespera. Alle Rechte vorbehalten.)", name: "footer_copyright", widget: "string", required: false}
+          - {label: "--- UNTERSEITE: KONTAKT & FOOTER (GANZ UNTEN) ---", name: "divider_page_contact", widget: "hidden", required: false}
+          - {label: "7.01 Kontakt – Überschrift", name: "contact_title", widget: "string", required: false}
+          - {label: "7.02 Kontakt – Einleitungstext", name: "contact_intro", widget: "text", required: false}
+          - {label: "7.03 E-Mail-Adresse für Anfragen", name: "contact_email", widget: "string", required: false}
+          - {label: "7.04 Social Media – Instagram Link (URL)", name: "instagram", widget: "string", required: false}
+          - {label: "7.05 Social Media – TikTok Link (URL)", name: "tiktok", widget: "string", required: false}
+          - {label: "7.06 Ganz unten im Fußbereich – Copyright Text", name: "footer_copyright", widget: "string", required: false}
 
           # ==========================================
-          # 9. RECHTLICHES
+          # ABSCHNITT 9: RECHTLICHE SEITEN
           # ==========================================
-          - {label: "Impressum Text", name: "impressum", widget: "markdown", required: false}
-          - {label: "Datenschutzerklärung Text", name: "privacy", widget: "markdown", required: false}
+          - {label: "--- RECHTLICHES (IMPRESSUM & DATENSCHUTZ) ---", name: "divider_legal", widget: "hidden", required: false}
+          - {label: "8.01 Impressum Text", name: "impressum", widget: "markdown", required: false}
+          - {label: "8.02 Datenschutzerklärung Text", name: "privacy", widget: "markdown", required: false}
 
       # ==========================================
-      # 10. BÜCHER-DETAILSEITEN ("MEHR ZUM BUCH" POPUP / SEITE)
+      # BÜCHER-DETAILSEITEN ("MEHR ZUM BUCH")
+      # (Genaue Reihenfolge von oben nach unten auf einer Buchseite)
       # ==========================================
       - name: "books"
         label: "Bücher-Detailseiten (\"Mehr zum Buch\")"
@@ -102,15 +143,35 @@ collections:
             name: "books"
             widget: "list"
             fields:
-              - {label: "Buchtitel (z.B. DEADLY WORDS)", name: "title", widget: "string"}
-              - {label: "Untertitel (z.B. Jedes Wort eine Lüge)", name: "subtitle", widget: "string", required: false}
-              - {label: "URL-Kennung (z.B. deadly-words)", name: "slug", widget: "string"}
-              - {label: "Status (z. B. In Überarbeitung / Neu / Erhältlich)", name: "status", widget: "string", required: false}
-              - {label: "Erscheinungstermin (z. B. Dezember 2026)", name: "release", widget: "string", required: false}
-              - {label: "Genre / Subgenre (z. B. Dark Romance / Psychological Thriller)", name: "genre", widget: "string", required: false}
-              - {label: "Seitenzahl (z. B. ca. 400 Seiten)", name: "pages", widget: "string", required: false}
-              - {label: "Cover-Bild (für die Detailansicht)", name: "cover", widget: "image", required: false}
-              - {label: "Ausführlicher Klappentext / Beschreibung", name: "blurb", widget: "text", required: false}
-              - {label: "Die Echtheit hinter dem Buch (Hintergrund-Absatz)", name: "reality", widget: "text", required: false}
-              - {label: "Triggerwarnungen (eine Triggerwarnung pro Zeile)", name: "triggers", widget: "text", required: false}
-              - {label: "Shop / Kauf-Link (z. B. epubli / Amazon)", name: "buy_link", widget: "string", required: false}
+              # --- OBEN: HEADER DER BUCHSEITE ---
+              - {label: "--- 1. KOPFBEREICH DER BUCHSEITE (OBEN) ---", name: "div_b1", widget: "hidden", required: false}
+              - {label: "Badge ganz oben (z.B. DEBÜTROMAN · DARK ROMANCE)", name: "badge", widget: "string", required: false}
+              - {label: "Slogan / Akzentzeile über dem Titel (z.B. Gefährliche Worte.)", name: "hook_line", widget: "string", required: false}
+              - {label: "Großer Buchtitel (z.B. DEADLY WORDS)", name: "title", widget: "string"}
+              - {label: "Untertitel unter dem Titel (z.B. Jedes Wort eine Lüge.)", name: "subtitle", widget: "string", required: false}
+              - {label: "Großes Hauptzitat / Quote (z.B. DU LÜGST FÜR DIE TOTEN...)", name: "quote_text", widget: "text", required: false}
+              - {label: "Genre-Tags unter dem Zitat (z.B. DARK ROMANCE, PSYCHOLOGISCH, 18+)", name: "header_tags", widget: "string", required: false}
+              - {label: "Cover-Bild auf der linken Seite", name: "cover", widget: "image", required: false}
+              - {label: "URL-Kennung (z.B. deadly-words - klein & ohne Leerzeichen)", name: "slug", widget: "string"}
+
+              # --- MITTE: INFO-LEISTE & KLAPPENTEXT ---
+              - {label: "--- 2. INFOLEISTE & KLAPPENTEXT (MITTE) ---", name: "div_b2", widget: "hidden", required: false}
+              - {label: "Info 1: Genre (z.B. Dark Romance)", name: "genre", widget: "string", required: false}
+              - {label: "Info 2: Status (z.B. Debütroman / In Überarbeitung)", name: "status", widget: "string", required: false}
+              - {label: "Info 3: Seitenanzahl (z.B. 400 Seiten)", name: "pages", widget: "string", required: false}
+              - {label: "Info 4: Erscheinungstermin (z.B. Dezember 2026)", name: "release", widget: "string", required: false}
+              - {label: "Klappentext – Kurze Einleitung / Teaserzeile", name: "blurb_intro", widget: "string", required: false}
+              - {label: "Klappentext – Der eigentliche Haupttext", name: "blurb", widget: "text", required: false}
+
+              # --- WEITER UNTEN: TROPES & ECHTHEIT ---
+              - {label: "--- 3. TROPES & ECHTHEIT HINTER DEM BUCH ---", name: "div_b3", widget: "hidden", required: false}
+              - {label: "Tropes Schlagworte (z.B. Obsession, Geheimnisse, Intrigen)", name: "tropes_list", widget: "string", required: false}
+              - {label: "Tropes Hinweistext unter den Schlagworten", name: "tropes_text", widget: "text", required: false}
+              - {label: "Echtheit hinter dem Buch – Untertitel (z.B. Was ist echt? Was ist inspiriert?)", name: "reality_subtitle", widget: "string", required: false}
+              - {label: "Echtheit hinter dem Buch – Textinhalt", name: "reality", widget: "text", required: false}
+
+              # --- GANZ UNTEN: TRIGGER & KAUFLINKS ---
+              - {label: "--- 4. TRIGGERWARNUNGEN & LINKS (GANZ UNTEN) ---", name: "div_b4", widget: "hidden", required: false}
+              - {label: "Triggerwarnungen (eine Warnung pro Zeile)", name: "triggers", widget: "text", required: false}
+              - {label: "Leseprobe-Link (URL oder PDF)", name: "sample_link", widget: "string", required: false}
+              - {label: "Shop / Kauf-Link (z.B. Amazon, Thalia, epubli)", name: "buy_link", widget: "string", required: false}

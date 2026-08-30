@@ -143,5 +143,5 @@ collections:
 
           - {label: "=== TRIGGERWARNUNGEN & KAUFLINKS ===", name: "sb4", widget: "hidden", required: false}
           - {label: "Triggerwarnungen (eine pro Zeile)", name: "triggers", widget: "text", required: false}
-          - {label: "Leseprobe Link", name: "sample_link", widget: "string", required: false}
+          - {label: "Leseprobe PDF hochladen", name: "sample_link", widget: "file", required: false}
           - {label: "Kauf-Link (Shop)", name: "buy_link", widget: "string", required: false}

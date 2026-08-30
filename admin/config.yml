@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: jsvespera/js-vespera-website
+  name: git-gateway
   branch: main
 
 media_folder: "assets/uploads"
@@ -36,7 +35,7 @@ collections:
           # STARTSEITE 2: ÜBER MICH VORSCHAU
           # ==========================================
           - {label: "--- STARTSEITE: ÜBER MICH VORSCHAU-BEREICH ---", name: "div_h2", widget: "hidden", required: false}
-          - {label: "Autorenfoto links hochladen", name: "home_about_image", widget: "image", required: false}
+          - {label: "Foto links", name: "home_about_image", widget: "image", required: false}
           - {label: "Kleine Zeile drüber (Aktuell: Über mich)", name: "home_about_subtitle", widget: "string", required: false}
           - {label: "Große Überschrift (Aktuell: DIE WORTE HINTER DEN GESCHICHTEN.)", name: "home_about_title", widget: "string", required: false}
           - {label: "Text Absatz 1", name: "home_about_p1", widget: "text", required: false}
@@ -65,7 +64,7 @@ collections:
           - {label: "Buch-Vorschau Titel (Aktuell: DEADLY WORDS)", name: "home_book_title", widget: "string", required: false}
           - {label: "Buch-Vorschau Teaser", name: "home_book_teaser", widget: "text", required: false}
           - {label: "Buch-Vorschau Button (Aktuell: MEHR ZUM BUCH)", name: "home_book_btn", widget: "string", required: false}
-          - {label: "Buch-Vorschau Cover hochladen", name: "home_book_cover", widget: "image", required: false}
+          - {label: "Buch-Vorschau Cover", name: "home_book_cover", widget: "image", required: false}
 
           - {label: "Dunkler Zitat-Kasten (Aktuell: „Du lügst für die Toten...“)", name: "quote_box_text", widget: "text", required: false}
 
@@ -77,7 +76,7 @@ collections:
           - {label: "Roter Kasten Titel (Aktuell: Über mich)", name: "about_title", widget: "string", required: false}
           - {label: "Roter Kasten Einleitung", name: "about_intro", widget: "text", required: false}
           
-          - {label: "Autorenfoto Unterseite hochladen", name: "about_page_image", widget: "image", required: false}
+          - {label: "Autorenfoto links", name: "about_page_image", widget: "image", required: false}
           - {label: "Überschrift (Aktuell: Wer hinter J.S. Vespera steckt)", name: "about_bio_title", widget: "string", required: false}
           - {label: "Vorstellungstext", name: "about_story", widget: "text", required: false}
 
@@ -125,7 +124,7 @@ collections:
           - {label: "Untertitel (Aktuell: Jedes Wort eine Lüge.)", name: "subtitle", widget: "string", required: false}
           - {label: "Großes Zitat (Aktuell: DU LÜGST FÜR DIE TOTEN...)", name: "quote_text", widget: "text", required: false}
           - {label: "Genre Tags (Aktuell: DARK ROMANCE, PSYCHOLOGISCH, 18+)", name: "header_tags", widget: "string", required: false}
-          - {label: "Cover-Bild hochladen", name: "cover", widget: "image", required: false}
+          - {label: "Cover-Bild", name: "cover", widget: "image", required: false}
           - {label: "URL Kürzel (Aktuell: deadly-words)", name: "slug", widget: "string", required: false}
 
           - {label: "=== INFOLEISTE & KLAPPENTEXT ===", name: "sb2", widget: "hidden", required: false}
@@ -144,5 +143,5 @@ collections:
 
           - {label: "=== TRIGGERWARNUNGEN & KAUFLINKS ===", name: "sb4", widget: "hidden", required: false}
           - {label: "Triggerwarnungen (eine pro Zeile)", name: "triggers", widget: "text", required: false}
-          - {label: "Leseprobe PDF hochladen", name: "sample_link", widget: "file", required: false}
+          - {label: "Leseprobe Link", name: "sample_link", widget: "string", required: false}
           - {label: "Kauf-Link (Shop)", name: "buy_link", widget: "string", required: false}

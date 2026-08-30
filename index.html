@@ -301,17 +301,32 @@ box-shadow:0 22px 55px rgba(79,13,33,.48);
       <div class="ornament"><span></span> ♡ <span></span></div>
       <p>Jede Geschichte hat ihre eigenen Geheimnisse. Mein Bücherregal wächst mit jeder neuen Welt.</p>
     </div>
-    <div class="home-book-cover">
-    <img src="{{ book_page_cover }}" alt="{{ book_page_title }}">
+<div class="home-book-cover">
+    <img id="home-cover" src="" alt="">
 </div>
 <div class="home-book-copy">
-    <p class="eyebrow">{{ book_page_badge }}</p>
-    <h2>{{ book_page_title }}</h2>
-    <p>{{ blurb_text }}</p>
+    <p class="eyebrow" id="home-badge"></p>
+    <h2 id="home-title"></h2>
+    <p id="home-blurb"></p>
     <a class="button" href="#deadly-words" data-page="deadly-words">MEHR ZUM BUCH <span>›</span></a>
 </div>
 
-    </div>
+<script>
+fetch('/content/books.json')
+  .then(res => res.json())
+  .then(data => {
+    if (data.book_page_cover) document.getElementById('home-cover').src = data.book_page_cover;
+    if (data.book_page_title) {
+      document.getElementById('home-cover').alt = data.book_page_title;
+      document.getElementById('home-title').textContent = data.book_page_title;
+    }
+    if (data.book_page_badge) document.getElementById('home-badge').textContent = data.book_page_badge;
+    if (data.blurb_text) document.getElementById('home-blurb').textContent = data.blurb_text;
+  })
+  .catch(err => console.log(err));
+</script>
+
+ </div>
     <div class="home-book-note">
       <p>Manche Worte<br>zerstören.<br>Andere retten.<br><em>Meins tun beides.</em></p>
     </div>

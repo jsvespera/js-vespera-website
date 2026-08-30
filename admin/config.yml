@@ -1,0 +1,55 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "website"
+    label: "Website-Inhalte"
+    files:
+      - name: "site"
+        label: "Website bearbeiten"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - {label: "Startseite – kleine Zeile", name: "home_accent", widget: "string"}
+          - {label: "Startseite – Überschrift", name: "home_title", widget: "text"}
+          - {label: "Startseite – Beschreibung", name: "home_lead", widget: "text"}
+          - {label: "Startseite – Bild", name: "hero_image", widget: "image", required: false}
+          - {label: "Über mich – Einleitung", name: "about_intro", widget: "text"}
+          - {label: "Über mich – Vorstellung", name: "about_story", widget: "text"}
+          - {label: "Über mich – Foto", name: "author_image", widget: "image", required: false}
+          - {label: "Deadly Words – Die Geschichte", name: "deadly_story", widget: "text", required: false}
+          - {label: "Deadly Words – Die Echtheit hinter dem Buch", name: "deadly_reality", widget: "text", required: false}
+          - {label: "Deadly Words – Triggerliste (eine Zeile pro Trigger)", name: "deadly_triggers", widget: "text", required: false}
+          - {label: "Deadly Words – Cover", name: "deadly_cover", widget: "image", required: false}
+          - {label: "Testleser – Einleitung", name: "beta_intro", widget: "text"}
+          - {label: "Testleser – Text", name: "beta_body", widget: "text"}
+          - {label: "Blogger & Kooperationen – Einleitung", name: "cooperation_intro", widget: "text"}
+          - {label: "Blogger & Kooperationen – Text", name: "cooperation_body", widget: "text"}
+          - {label: "Kontakt – Einleitung", name: "contact_intro", widget: "text"}
+          - {label: "Kontakt-E-Mail", name: "contact_email", widget: "string", required: false}
+          - {label: "Instagram-Link", name: "instagram", widget: "string", required: false}
+          - {label: "TikTok-Link", name: "tiktok", widget: "string", required: false}
+          - {label: "Impressum", name: "impressum", widget: "text"}
+          - {label: "Datenschutzerklärung", name: "privacy", widget: "text"}
+
+      - name: "books"
+        label: "Bücherregal verwalten"
+        file: "content/books.json"
+        format: "json"
+        fields:
+          - label: "Bücher"
+            name: "books"
+            widget: "list"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "URL-Name (einzigartig, z. B. mein-zweites-buch)", name: "slug", widget: "string"}
+              - {label: "Status", name: "status", widget: "string", required: false}
+              - {label: "Erscheinung", name: "release", widget: "string", required: false}
+              - {label: "Cover", name: "cover", widget: "image", required: false}
+              - {label: "Klappentext", name: "blurb", widget: "text", required: false}
+              - {label: "Die Echtheit hinter dem Buch", name: "reality", widget: "text", required: false}
+              - {label: "Triggerliste (eine Zeile pro Trigger)", name: "triggers", widget: "text", required: false}

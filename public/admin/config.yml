@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "books"
+    label: "Bücher"
+    file: "content/books.json"
+    fields:
+      - { label: "Badge", name: "badge", widget: "string" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Untertitel", name: "subtitle", widget: "string" }
+      - { label: "Klappentext", name: "description", widget: "text" }
+      - { label: "Button-Text", name: "buttonText", widget: "string" }
+      - { label: "Button-Link", name: "buttonLink", widget: "string" }
+      - { label: "Cover-Bild", name: "coverImage", widget: "image" }
+
+  - name: "site"
+    label: "Website Einstellungen"
+    file: "content/site.json"
+    fields:
+      - { label: "Website Titel", name: "siteTitle", widget: "string" }
+      - { label: "Über mich Text", name: "aboutText", widget: "text" }
+

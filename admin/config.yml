@@ -14,57 +14,85 @@ collections:
         file: "content/site.json"
         format: "json"
         fields:
-          # --- HEADER / NAVIGATION ---
-          - {label: "Header – Autorenname (oben links)", name: "brand_name", widget: "string", required: false}
+          # ==========================================
+          # 1. HEADER / NAVIGATION
+          # ==========================================
+          - {label: "Header – Markenname / Logo (oben links, z.B. J.S. Vespera)", name: "brand_name", widget: "string", required: false}
 
-          # --- STARTSEITE / HERO-BEREICH ---
-          - {label: "Hero – Kleine Zeile oben (z.B. J.S. Vespera)", name: "home_accent", widget: "string", required: false}
+          # ==========================================
+          # 2. STARTSEITE / HERO-BEREICH
+          # ==========================================
+          - {label: "Hero – Kleine Akzentzeile oben (z.B. J.S. Vespera)", name: "home_accent", widget: "string", required: false}
           - {label: "Hero – Erste Hauptüberschrift (z.B. Gefährliche Worte.)", name: "home_title", widget: "string", required: false}
-          - {label: "Hero – Zweite Hauptüberschrift (z.B. VERBOTENE WAHRHEITEN)", name: "home_title_2", widget: "string", required: false}
+          - {label: "Hero – Zweite Hauptüberschrift (z.B. VERBOTENE WAHRHEITEN.)", name: "home_title_2", widget: "string", required: false}
           - {label: "Hero – Einleitungstext / Absatz", name: "home_lead", widget: "text", required: false}
           - {label: "Hero – Button Text (z.B. ENTDECKE MEINE WELT)", name: "home_button_text", widget: "string", required: false}
           - {label: "Hero – Hintergrundbild", name: "hero_image", widget: "image", required: false}
 
-          # --- TAUCHE EIN IN MEINE WELT (DEADLY WORDS STARTSEITE) ---
-          - {label: "Buch-Sektion – Sektions-Überschrift (z.B. Tauche ein in meine Welt)", name: "section_books_title", widget: "string", required: false}
-          - {label: "Deadly Words – Buchtitel", name: "deadly_title", widget: "string", required: false}
-          - {label: "Deadly Words – Untertitel (z.B. Jedes Wort eine Lüge)", name: "deadly_subtitle", widget: "string", required: false}
-          - {label: "Deadly Words – Status-Badge (z.B. In Überarbeitung)", name: "deadly_status", widget: "string", required: false}
-          - {label: "Deadly Words – Kurz-Klappentext Startseite", name: "deadly_story", widget: "text", required: false}
-          - {label: "Deadly Words – Button Text (z.B. Mehr zum Buch)", name: "deadly_btn_text", widget: "string", required: false}
-          - {label: "Deadly Words – Cover-Bild", name: "deadly_cover", widget: "image", required: false}
+          # ==========================================
+          # 3. STARTSEITE – ÜBER MICH TEASER / VORSCHAUKASTEN
+          # ==========================================
+          - {label: "Startseite Über mich – Vorschautext (\"Geschichten haben mich schon immer...\")", name: "about_preview_text", widget: "text", required: false}
+          - {label: "Startseite Über mich – Badge 1 (z.B. Dark Romance & Thriller)", name: "about_badge_1", widget: "string", required: false}
+          - {label: "Startseite Über mich – Badge 2 (z.B. Persönliche Einblicke)", name: "about_badge_2", widget: "string", required: false}
+          - {label: "Startseite Über mich – Button Text (z.B. Mehr über mich)", name: "about_btn_text", widget: "string", required: false}
 
-          # --- ÜBER DIE AUTORIN ---
+          # ==========================================
+          # 4. TAUCHE EIN IN MEINE WELT (DEADLY WORDS STARTSEITEN-SEKTION)
+          # ==========================================
+          - {label: "Bücher-Sektion – Hauptüberschrift (z.B. Tauche ein in meine Welt)", name: "section_books_title", widget: "string", required: false}
+          - {label: "Deadly Words – Startseite Buchtitel (z.B. Deadly Words)", name: "deadly_title", widget: "string", required: false}
+          - {label: "Deadly Words – Startseite Untertitel (z.B. Jedes Wort eine Lüge)", name: "deadly_subtitle", widget: "string", required: false}
+          - {label: "Deadly Words – Status-Badge (z.B. In Überarbeitung)", name: "deadly_status", widget: "string", required: false}
+          - {label: "Deadly Words – Erscheinungsdatum-Badge (z.B. Dez 2026)", name: "deadly_release_badge", widget: "string", required: false}
+          - {label: "Deadly Words – Startseite Kurz-Klappentext", name: "deadly_story", widget: "text", required: false}
+          - {label: "Deadly Words – Button Text (z.B. Mehr zum Buch)", name: "deadly_btn_text", widget: "string", required: false}
+          - {label: "Deadly Words – Cover-Bild Startseite", name: "deadly_cover", widget: "image", required: false}
+
+          # ==========================================
+          # 5. ÜBER DIE AUTORIN (DETAILS)
+          # ==========================================
           - {label: "Über mich – Überschrift (z.B. Über die Autorin)", name: "about_title", widget: "string", required: false}
           - {label: "Über mich – Zitat / Einleitung", name: "about_intro", widget: "text", required: false}
           - {label: "Über mich – Haupttext Absatz 1", name: "about_story", widget: "text", required: false}
           - {label: "Über mich – Haupttext Absatz 2", name: "about_story_2", widget: "text", required: false}
           - {label: "Über mich – Autorenfoto", name: "author_image", widget: "image", required: false}
 
-          # --- TESTLESER ---
-          - {label: "Testleser – Überschrift", name: "beta_title", widget: "string", required: false}
+          # ==========================================
+          # 6. TESTLESER
+          # ==========================================
+          - {label: "Testleser – Überschrift (z.B. Werde Testleser)", name: "beta_title", widget: "string", required: false}
           - {label: "Testleser – Einleitungstext", name: "beta_intro", widget: "text", required: false}
-          - {label: "Testleser – Haupttext / Ablauf", name: "beta_body", widget: "text", required: false}
-          - {label: "Testleser – Button Text", name: "beta_btn_text", widget: "string", required: false}
+          - {label: "Testleser – Haupttext / Anforderung / Ablauf", name: "beta_body", widget: "text", required: false}
+          - {label: "Testleser – Button Text / Aktion (z.B. Jetzt bewerben)", name: "beta_btn_text", widget: "string", required: false}
 
-          # --- BLOGGER & KOOPERATIONEN ---
-          - {label: "Blogger – Überschrift", name: "cooperation_title", widget: "string", required: false}
+          # ==========================================
+          # 7. BLOGGER & KOOPERATIONEN
+          # ==========================================
+          - {label: "Blogger – Überschrift (z.B. Blogger & Kooperationen)", name: "cooperation_title", widget: "string", required: false}
           - {label: "Blogger – Einleitungstext", name: "cooperation_intro", widget: "text", required: false}
-          - {label: "Blogger – Haupttext / Kriterien", name: "cooperation_body", widget: "text", required: false}
-          - {label: "Blogger – Button Text", name: "cooperation_btn_text", widget: "string", required: false}
+          - {label: "Blogger – Haupttext / Kriterien & Infos", name: "cooperation_body", widget: "text", required: false}
+          - {label: "Blogger – Button Text (z.B. Anfrage senden)", name: "cooperation_btn_text", widget: "string", required: false}
 
-          # --- KONTAKT & FOOTER ---
-          - {label: "Kontakt – Überschrift", name: "contact_title", widget: "string", required: false}
+          # ==========================================
+          # 8. KONTAKT & FOOTER
+          # ==========================================
+          - {label: "Kontakt – Überschrift (z.B. Kontakt)", name: "contact_title", widget: "string", required: false}
           - {label: "Kontakt – Einleitungstext", name: "contact_intro", widget: "text", required: false}
           - {label: "Kontakt – E-Mail-Adresse", name: "contact_email", widget: "string", required: false}
           - {label: "Social Media – Instagram URL", name: "instagram", widget: "string", required: false}
           - {label: "Social Media – TikTok URL", name: "tiktok", widget: "string", required: false}
-          - {label: "Footer – Copyright Text", name: "footer_copyright", widget: "string", required: false}
+          - {label: "Footer – Copyright Text (z.B. © 2026 J.S. Vespera. Alle Rechte vorbehalten.)", name: "footer_copyright", widget: "string", required: false}
 
-          # --- RECHTLICHES ---
+          # ==========================================
+          # 9. RECHTLICHES
+          # ==========================================
           - {label: "Impressum Text", name: "impressum", widget: "markdown", required: false}
           - {label: "Datenschutzerklärung Text", name: "privacy", widget: "markdown", required: false}
 
+      # ==========================================
+      # 10. BÜCHER-DETAILSEITEN ("MEHR ZUM BUCH" POPUP / SEITE)
+      # ==========================================
       - name: "books"
         label: "Bücher-Detailseiten (\"Mehr zum Buch\")"
         file: "content/books.json"
@@ -74,15 +102,15 @@ collections:
             name: "books"
             widget: "list"
             fields:
-              - {label: "Buchtitel", name: "title", widget: "string"}
-              - {label: "Untertitel / Unterzeile", name: "subtitle", widget: "string", required: false}
+              - {label: "Buchtitel (z.B. DEADLY WORDS)", name: "title", widget: "string"}
+              - {label: "Untertitel (z.B. Jedes Wort eine Lüge)", name: "subtitle", widget: "string", required: false}
               - {label: "URL-Kennung (z.B. deadly-words)", name: "slug", widget: "string"}
-              - {label: "Status (z. B. In Überarbeitung / Neu)", name: "status", widget: "string", required: false}
-              - {label: "Erscheinungstermin (z. B. Dez 2026)", name: "release", widget: "string", required: false}
-              - {label: "Genre / Subgenre", name: "genre", widget: "string", required: false}
-              - {label: "Seitenzahl (geschätzt)", name: "pages", widget: "string", required: false}
-              - {label: "Cover-Bild", name: "cover", widget: "image", required: false}
-              - {label: "Ausführlicher Klappentext", name: "blurb", widget: "text", required: false}
-              - {label: "Die Echtheit hinter dem Buch", name: "reality", widget: "text", required: false}
-              - {label: "Triggerwarnungen (eine pro Zeile)", name: "triggers", widget: "text", required: false}
-              - {label: "Shop / Kauf-Link (später)", name: "buy_link", widget: "string", required: false}
+              - {label: "Status (z. B. In Überarbeitung / Neu / Erhältlich)", name: "status", widget: "string", required: false}
+              - {label: "Erscheinungstermin (z. B. Dezember 2026)", name: "release", widget: "string", required: false}
+              - {label: "Genre / Subgenre (z. B. Dark Romance / Psychological Thriller)", name: "genre", widget: "string", required: false}
+              - {label: "Seitenzahl (z. B. ca. 400 Seiten)", name: "pages", widget: "string", required: false}
+              - {label: "Cover-Bild (für die Detailansicht)", name: "cover", widget: "image", required: false}
+              - {label: "Ausführlicher Klappentext / Beschreibung", name: "blurb", widget: "text", required: false}
+              - {label: "Die Echtheit hinter dem Buch (Hintergrund-Absatz)", name: "reality", widget: "text", required: false}
+              - {label: "Triggerwarnungen (eine Triggerwarnung pro Zeile)", name: "triggers", widget: "text", required: false}
+              - {label: "Shop / Kauf-Link (z. B. epubli / Amazon)", name: "buy_link", widget: "string", required: false}

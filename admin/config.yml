@@ -17,48 +17,41 @@ collections:
         format: "json"
         fields:
           # === 01. NAVIGATION / LOGO ===
-          - {label: "--- 01. LOGO & NAVIGATION ---", name: "div_nav", widget: "hidden", required: false}
-          - {label: "01.1 Logo Name (Aktuell: J.S. Vespera)", name: "brand_name", widget: "string", required: false}
+          - {label: "01. Logo Name", name: "brand_name", widget: "string", required: false}
 
           # === 02. STARTSEITE (HOME) ===
-          - {label: "--- 02. STARTSEITE (HOME) ---", name: "div_h1", widget: "hidden", required: false}
-          - {label: "02.1 Kleine Zeile oben (Aktuell: Gefährliche Worte.)", name: "home_accent", widget: "string", required: false}
-          - {label: "02.2 Große Überschrift 1 (Aktuell: Verbotene)", name: "home_title", widget: "string", required: false}
-          - {label: "02.3 Große Überschrift 2 (Aktuell: Wahrheiten)", name: "home_title_2", widget: "string", required: false}
+          - {label: "02.1 Kleine Zeile oben", name: "home_accent", widget: "string", required: false}
+          - {label: "02.2 Große Überschrift 1", name: "home_title", widget: "string", required: false}
+          - {label: "02.3 Große Überschrift 2", name: "home_title_2", widget: "string", required: false}
           - {label: "02.4 Einleitungstext", name: "home_lead", widget: "text", required: false}
-          - {label: "02.5 Button Text (Aktuell: ENTDECKE MEINE WELT)", name: "home_button_text", widget: "string", required: false}
+          - {label: "02.5 Button Text", name: "home_button_text", widget: "string", required: false}
 
           # === 03. STARTSEITE: ÜBER MICH VORSCHAU ===
-          - {label: "--- 03. STARTSEITE: ÜBER MICH VORSCHAU ---", name: "div_h2", widget: "hidden", required: false}
           - {label: "03.1 Vorschau Bild links", name: "home_about_image", widget: "image", required: false}
-          - {label: "03.2 Überschrift (Aktuell: DIE WORTE HINTER DEN GESCHICHTEN.)", name: "home_about_title", widget: "string", required: false}
+          - {label: "03.2 Überschrift", name: "home_about_title", widget: "string", required: false}
           - {label: "03.3 Text Absatz 1", name: "home_about_p1", widget: "text", required: false}
           - {label: "03.4 Text Absatz 2", name: "home_about_p2", widget: "text", required: false}
-          - {label: "03.5 Button Text (Aktuell: MEHR ÜBER MICH)", name: "home_about_btn", widget: "string", required: false}
+          - {label: "03.5 Button Text", name: "home_about_btn", widget: "string", required: false}
 
           # === 04. SEITE: ÜBER MICH ===
-          - {label: "--- 04. SEITE: ÜBER MICH (SEPARATE SEITE) ---", name: "div_p_about", widget: "hidden", required: false}
-          - {label: "04.1 Badge Kasten (Aktuell: DIE AUTORIN)", name: "about_header_badge", widget: "string", required: false}
-          - {label: "04.2 Titel (Aktuell: Über mich)", name: "about_title", widget: "string", required: false}
+          - {label: "04.1 Badge Kasten", name: "about_header_badge", widget: "string", required: false}
+          - {label: "04.2 Titel", name: "about_title", widget: "string", required: false}
           - {label: "04.3 Untertitel Kasten", name: "about_intro", widget: "text", required: false}
           - {label: "04.4 Autorenfoto links", name: "about_page_image", widget: "image", required: false}
-          - {label: "04.5 Hauptüberschrift (Aktuell: Wer hinter J.S. Vespera steckt)", name: "about_bio_title", widget: "string", required: false}
+          - {label: "04.5 Hauptüberschrift", name: "about_bio_title", widget: "string", required: false}
           - {label: "04.6 Haupttext", name: "about_story", widget: "text", required: false}
 
           # === 05. SEITE: TESTLESER ===
-          - {label: "--- 05. SEITE: TESTLESER ---", name: "div_beta", widget: "hidden", required: false}
-          - {label: "05.1 Badge Kasten (Aktuell: TESTLESER)", name: "beta_badge", widget: "string", required: false}
-          - {label: "05.2 Haupt-Überschrift (Aktuell: Werde Teil meines Testleser-Teams)", name: "beta_title", widget: "string", required: false}
+          - {label: "05.1 Badge Kasten", name: "beta_badge", widget: "string", required: false}
+          - {label: "05.2 Haupt-Überschrift", name: "beta_title", widget: "string", required: false}
           - {label: "05.3 Einleitungstext Kasten", name: "beta_body", widget: "text", required: false}
 
           # === 06. SEITE: BLOGGER & KOOPERATIONEN ===
-          - {label: "--- 06. SEITE: BLOGGER & KOOPERATIONEN ---", name: "div_coop", widget: "hidden", required: false}
-          - {label: "06.1 Badge Kasten (Aktuell: BOOKSTAGRAM - BOOKTOK - BLOGS)", name: "coop_badge", widget: "string", required: false}
-          - {label: "06.2 Haupt-Überschrift (Aktuell: Blogger & Kooperationen)", name: "cooperation_title", widget: "string", required: false}
+          - {label: "06.1 Badge Kasten", name: "coop_badge", widget: "string", required: false}
+          - {label: "06.2 Haupt-Überschrift", name: "cooperation_title", widget: "string", required: false}
           - {label: "06.3 Einleitungstext Kasten", name: "cooperation_body", widget: "text", required: false}
 
           # === 07. SEITE: KONTAKT & FOOTER ===
-          - {label: "--- 07. SEITE: KONTAKT & FOOTER ---", name: "div_contact", widget: "hidden", required: false}
           - {label: "07.1 Kontakt E-Mail-Adresse", name: "contact_email", widget: "string", required: false}
           - {label: "07.2 Instagram URL", name: "instagram", widget: "string", required: false}
           - {label: "07.3 TikTok URL", name: "tiktok", widget: "string", required: false}
@@ -73,35 +66,31 @@ collections:
         format: "json"
         fields:
           # === 08. BUCH-DETAILSEITE: KOPFBEREICH ===
-          - {label: "--- 08. DEADLY WORDS: KOPFBEREICH ---", name: "div_b1", widget: "hidden", required: false}
-          - {label: "08.1 Badge (Aktuell: DEBÜTROMAN - DARK ROMANCE)", name: "book_page_badge", widget: "string", required: false}
-          - {label: "08.2 Script-Zeile (Aktuell: Gefährliche Worte.)", name: "book_page_hook", widget: "string", required: false}
-          - {label: "08.3 Buchtitel (Aktuell: DEADLY WORDS)", name: "book_page_title", widget: "string", required: false}
-          - {label: "08.4 Untertitel (Aktuell: Jedes Wort eine Lüge.)", name: "book_page_subtitle", widget: "string", required: false}
-          - {label: "08.5 Großes Zitat (Aktuell: DU LÜGST FÜR DIE TOTEN...)", name: "book_page_quote", widget: "text", required: false}
+          - {label: "08.1 Badge", name: "book_page_badge", widget: "string", required: false}
+          - {label: "08.2 Script-Zeile", name: "book_page_hook", widget: "string", required: false}
+          - {label: "08.3 Buchtitel", name: "book_page_title", widget: "string", required: false}
+          - {label: "08.4 Untertitel", name: "book_page_subtitle", widget: "string", required: false}
+          - {label: "08.5 Großes Zitat", name: "book_page_quote", widget: "text", required: false}
           - {label: "08.6 Cover-Bild", name: "book_page_cover", widget: "image", required: false}
 
           # === 09. BUCH-DETAILSEITE: KLAPPENTEXT & INFOS ===
-          - {label: "--- 09. DEADLY WORDS: KLAPPENTEXT & INFOS ---", name: "div_b2", widget: "hidden", required: false}
-          - {label: "09.1 Genre (Aktuell: Dark Romance)", name: "book_info_genre", widget: "string", required: false}
-          - {label: "09.2 Status (Aktuell: Debütroman)", name: "book_info_status", widget: "string", required: false}
+          - {label: "09.1 Genre", name: "book_info_genre", widget: "string", required: false}
+          - {label: "09.2 Status", name: "book_info_status", widget: "string", required: false}
           - {label: "09.3 Seitenanzahl", name: "book_info_pages", widget: "string", required: false}
           - {label: "09.4 Erscheinungsdatum", name: "book_info_release", widget: "string", required: false}
-          - {label: "09.5 Klappentext Überschrift (Aktuell: Die Geschichte)", name: "blurb_title", widget: "string", required: false}
+          - {label: "09.5 Klappentext Überschrift", name: "blurb_title", widget: "string", required: false}
           - {label: "09.6 Klappentext Text", name: "blurb_text", widget: "markdown", required: false}
 
           # === 10. BUCH-DETAILSEITE: TROPES & ECHTHEIT ===
-          - {label: "--- 10. DEADLY WORDS: TROPES & ECHTHEIT ---", name: "div_b3", widget: "hidden", required: false}
-          - {label: "10.1 Tropes Überschrift (Aktuell: Was dich erwartet)", name: "tropes_title", widget: "string", required: false}
+          - {label: "10.1 Tropes Überschrift", name: "tropes_title", widget: "string", required: false}
           - {label: "10.2 Tropes Kacheln / Inhalt", name: "tropes_text", widget: "markdown", required: false}
-          - {label: "10.3 Echtheit Überschrift (Aktuell: Die Echtheit hinter dem Buch)", name: "reality_title", widget: "string", required: false}
-          - {label: "10.4 Echtheit Untertitel (Aktuell: Was ist echt? Was ist inspiriert?)", name: "reality_subtitle", widget: "string", required: false}
+          - {label: "10.3 Echtheit Überschrift", name: "reality_title", widget: "string", required: false}
+          - {label: "10.4 Echtheit Untertitel", name: "reality_subtitle", widget: "string", required: false}
           - {label: "10.5 Echtheit Haupttext", name: "reality_text", widget: "markdown", required: false}
 
           # === 11. BUCH-DETAILSEITE: TRIGGERLISTE & LESEPROBE ===
-          - {label: "--- 11. DEADLY WORDS: TRIGGER & LESEPROBE ---", name: "div_b4", widget: "hidden", required: false}
           - {label: "11.1 Triggerliste Überschrift", name: "trigger_title", widget: "string", required: false}
           - {label: "11.2 Triggerliste Inhalt", name: "trigger_text", widget: "markdown", required: false}
           - {label: "11.3 Leseprobe Überschrift", name: "sample_title", widget: "string", required: false}
           - {label: "11.4 Leseprobe Beschreibungstext", name: "sample_text", widget: "markdown", required: false}
-          - {label: "11.5 LESEPROBE PDF DATEI HOCHLADEN", name: "sample_file", widget: "file", required: false}
+          - {label: "11.5 LESEPROBE PDF DATEI HOCHLADEN", name: "pdf_file", widget: "file", required: false}

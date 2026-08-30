@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: jsvespera/js-vespera-website # Falls dein GitHub-Repository anders heißt, passe den Namen hier an
   branch: main
 
 media_folder: "assets/uploads"
@@ -14,27 +15,52 @@ collections:
         file: "content/site.json"
         format: "json"
         fields:
-          - {label: "Startseite – kleine Zeile", name: "home_accent", widget: "string"}
-          - {label: "Startseite – Überschrift", name: "home_title", widget: "text"}
-          - {label: "Startseite – Beschreibung", name: "home_lead", widget: "text"}
-          - {label: "Startseite – Bild", name: "hero_image", widget: "image", required: false}
-          - {label: "Über mich – Einleitung", name: "about_intro", widget: "text"}
-          - {label: "Über mich – Vorstellung", name: "about_story", widget: "text"}
-          - {label: "Über mich – Foto", name: "author_image", widget: "image", required: false}
-          - {label: "Deadly Words – Die Geschichte", name: "deadly_story", widget: "text", required: false}
+          # --- STARTSEITE / HERO ---
+          - {label: "Startseite – Kleine Zeile oben (z.B. J.S. Vespera)", name: "home_accent", widget: "string", required: false}
+          - {label: "Startseite – Erste Hauptüberschrift (z.B. Gefährliche Worte.)", name: "home_title", widget: "string", required: false}
+          - {label: "Startseite – Zweite Hauptüberschrift (z.B. VERBOTENE WAHRHEITEN)", name: "home_title_2", widget: "string", required: false}
+          - {label: "Startseite – Beschreibungstext / Absatz", name: "home_lead", widget: "text", required: false}
+          - {label: "Startseite – Button Text (z.B. ENTDECKE MEINE WELT)", name: "home_button_text", widget: "string", required: false}
+          - {label: "Startseite – Button Link (z.B. #about)", name: "home_button_link", widget: "string", required: false}
+          - {label: "Startseite – Hintergrund- / Hero-Bild", name: "hero_image", widget: "image", required: false}
+
+          # --- ÜBER MICH ---
+          - {label: "Über mich – Überschrift", name: "about_title", widget: "string", required: false}
+          - {label: "Über mich – Einleitung / Zitat", name: "about_intro", widget: "text", required: false}
+          - {label: "Über mich – Haupttext / Vorstellung (Absatz 1)", name: "about_story", widget: "text", required: false}
+          - {label: "Über mich – Haupttext / Zusatz (Absatz 2)", name: "about_story_2", widget: "text", required: false}
+          - {label: "Über mich – Autorenfoto", name: "author_image", widget: "image", required: false}
+
+          # --- DEADLY WORDS (STARTSEITEN-BEREICH) ---
+          - {label: "Deadly Words – Bereichs-Überschrift", name: "deadly_title", widget: "string", required: false}
+          - {label: "Deadly Words – Untertitel / Status", name: "deadly_subtitle", widget: "string", required: false}
+          - {label: "Deadly Words – Die Geschichte (Kurztext)", name: "deadly_story", widget: "text", required: false}
           - {label: "Deadly Words – Die Echtheit hinter dem Buch", name: "deadly_reality", widget: "text", required: false}
           - {label: "Deadly Words – Triggerliste (eine Zeile pro Trigger)", name: "deadly_triggers", widget: "text", required: false}
-          - {label: "Deadly Words – Cover", name: "deadly_cover", widget: "image", required: false}
-          - {label: "Testleser – Einleitung", name: "beta_intro", widget: "text"}
-          - {label: "Testleser – Text", name: "beta_body", widget: "text"}
-          - {label: "Blogger & Kooperationen – Einleitung", name: "cooperation_intro", widget: "text"}
-          - {label: "Blogger & Kooperationen – Text", name: "cooperation_body", widget: "text"}
-          - {label: "Kontakt – Einleitung", name: "contact_intro", widget: "text"}
-          - {label: "Kontakt-E-Mail", name: "contact_email", widget: "string", required: false}
-          - {label: "Instagram-Link", name: "instagram", widget: "string", required: false}
-          - {label: "TikTok-Link", name: "tiktok", widget: "string", required: false}
-          - {label: "Impressum", name: "impressum", widget: "text"}
-          - {label: "Datenschutzerklärung", name: "privacy", widget: "text"}
+          - {label: "Deadly Words – Button Text (z.B. Mehr zum Buch)", name: "deadly_btn_text", widget: "string", required: false}
+          - {label: "Deadly Words – Cover-Bild", name: "deadly_cover", widget: "image", required: false}
+
+          # --- TESTLESER ---
+          - {label: "Testleser – Überschrift", name: "beta_title", widget: "string", required: false}
+          - {label: "Testleser – Einleitung", name: "beta_intro", widget: "text", required: false}
+          - {label: "Testleser – Haupttext", name: "beta_body", widget: "text", required: false}
+          - {label: "Testleser – Button Text / Link-Hinweis", name: "beta_btn_text", widget: "string", required: false}
+
+          # --- BLOGGER & KOOPERATIONEN ---
+          - {label: "Blogger & Kooperationen – Überschrift", name: "cooperation_title", widget: "string", required: false}
+          - {label: "Blogger & Kooperationen – Einleitung", name: "cooperation_intro", widget: "text", required: false}
+          - {label: "Blogger & Kooperationen – Haupttext", name: "cooperation_body", widget: "text", required: false}
+
+          # --- KONTAKT & SOCIAL MEDIA ---
+          - {label: "Kontakt – Überschrift", name: "contact_title", widget: "string", required: false}
+          - {label: "Kontakt – Einleitungstext", name: "contact_intro", widget: "text", required: false}
+          - {label: "Kontakt – E-Mail-Adresse", name: "contact_email", widget: "string", required: false}
+          - {label: "Social Media – Instagram Link", name: "instagram", widget: "string", required: false}
+          - {label: "Social Media – TikTok Link", name: "tiktok", widget: "string", required: false}
+
+          # --- RECHTLICHES ---
+          - {label: "Impressum", name: "impressum", widget: "markdown", required: false}
+          - {label: "Datenschutzerklärung", name: "privacy", widget: "markdown", required: false}
 
       - name: "books"
         label: "Bücherregal verwalten"
@@ -46,10 +72,12 @@ collections:
             widget: "list"
             fields:
               - {label: "Titel", name: "title", widget: "string"}
-              - {label: "URL-Name (einzigartig, z. B. mein-zweites-buch)", name: "slug", widget: "string"}
-              - {label: "Status", name: "status", widget: "string", required: false}
-              - {label: "Erscheinung", name: "release", widget: "string", required: false}
-              - {label: "Cover", name: "cover", widget: "image", required: false}
-              - {label: "Klappentext", name: "blurb", widget: "text", required: false}
+              - {label: "URL-Name (z.B. deadly-words)", name: "slug", widget: "string"}
+              - {label: "Untertitel / Reihe", name: "subtitle", widget: "string", required: false}
+              - {label: "Status (z. B. In Überarbeitung / Neu)", name: "status", widget: "string", required: false}
+              - {label: "Erscheinungstermin (z. B. Dez 2026)", name: "release", widget: "string", required: false}
+              - {label: "Cover-Bild", name: "cover", widget: "image", required: false}
+              - {label: "Klappentext / Beschreibung", name: "blurb", widget: "text", required: false}
               - {label: "Die Echtheit hinter dem Buch", name: "reality", widget: "text", required: false}
               - {label: "Triggerliste (eine Zeile pro Trigger)", name: "triggers", widget: "text", required: false}
+              - {label: "Shop / Kauf-Link", name: "buy_link", widget: "string", required: false}

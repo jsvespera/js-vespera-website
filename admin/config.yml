@@ -7,7 +7,7 @@ public_folder: "/assets/uploads"
 
 collections:
   - name: "website"
-    label: "1. HAUPTSEITE & UNTERSEITEN"
+    label: "1. HAUPTSEITE & UNTERSEITEN (STARTSEITE, ÜBER MICH, KONTAKT)"
     files:
       - name: "site"
         label: "Hauptseite Formular"
@@ -109,25 +109,26 @@ collections:
           - {label: "Impressum", name: "impressum", widget: "markdown", required: false}
           - {label: "Datenschutzerklärung", name: "privacy", widget: "markdown", required: false}
 
-  - name: "books_collection"
-    label: "2. BUCH-UNTERSEITE (DEADLY WORDS)"
-    files:
-      - name: "deadly_words"
-        label: "Deadly Words Unterseite bearbeiten"
-        file: "content/books.json"
-        format: "json"
+  - name: "books"
+    label: "2. BÜCHER-DETAILSEITEN (\"Mehr zum Buch\")"
+    file: "content/books.json"
+    format: "json"
+    fields:
+      - label: "Bücher Liste"
+        name: "books"
+        widget: "list"
         fields:
-          - {label: "=== OBERER BEREICH ===", name: "sb1", widget: "hidden", required: false}
+          - {label: "=== SCREENSHOT 1: OBERER BEREICH DEINES BUCHES ===", name: "sb1", widget: "hidden", required: false}
           - {label: "Roter Badge (Aktuell: DEBÜTROMAN · DARK ROMANCE)", name: "badge", widget: "string", required: false}
           - {label: "Script-Zeile (Aktuell: Gefährliche Worte.)", name: "hook_line", widget: "string", required: false}
-          - {label: "Buchtitel (Aktuell: DEADLY WORDS)", name: "title", widget: "string", required: false}
+          - {label: "Buchtitel (Aktuell: DEADLY WORDS)", name: "title", widget: "string"}
           - {label: "Untertitel (Aktuell: Jedes Wort eine Lüge.)", name: "subtitle", widget: "string", required: false}
           - {label: "Großes Zitat (Aktuell: DU LÜGST FÜR DIE TOTEN...)", name: "quote_text", widget: "text", required: false}
           - {label: "Genre Tags (Aktuell: DARK ROMANCE, PSYCHOLOGISCH, 18+)", name: "header_tags", widget: "string", required: false}
           - {label: "Cover-Bild", name: "cover", widget: "image", required: false}
-          - {label: "URL Kürzel (Aktuell: deadly-words)", name: "slug", widget: "string", required: false}
+          - {label: "URL Kürzel (Aktuell: deadly-words)", name: "slug", widget: "string"}
 
-          - {label: "=== INFOLEISTE & KLAPPENTEXT ===", name: "sb2", widget: "hidden", required: false}
+          - {label: "=== SCREENSHOT 2: INFOLEISTE & KLAPPENTEXT ===", name: "sb2", widget: "hidden", required: false}
           - {label: "Genre (Aktuell: Dark Romance)", name: "genre", widget: "string", required: false}
           - {label: "Status (Aktuell: In Überarbeitung / Testlesephase)", name: "status", widget: "string", required: false}
           - {label: "Seitenanzahl (Aktuell: ca. 400 Seiten)", name: "pages", widget: "string", required: false}
@@ -135,7 +136,7 @@ collections:
           - {label: "Klappentext Einleitung (Aktuell: Ein verbotenes Spiel...)", name: "blurb_intro", widget: "string", required: false}
           - {label: "Klappentext Haupttext", name: "blurb", widget: "text", required: false}
 
-          - {label: "=== TROPES & ECHTHEIT ===", name: "sb3", widget: "hidden", required: false}
+          - {label: "=== SCREENSHOT 3: TROPES & ECHTHEIT ===", name: "sb3", widget: "hidden", required: false}
           - {label: "Tropes Kacheln (Aktuell: DARK ROMANCE, OBSESSION...)", name: "tropes_list", widget: "string", required: false}
           - {label: "Tropes Hinweis", name: "tropes_text", widget: "text", required: false}
           - {label: "Echtheit Untertitel (Aktuell: Was ist echt? Was ist inspiriert?)", name: "reality_subtitle", widget: "string", required: false}

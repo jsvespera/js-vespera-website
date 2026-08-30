@@ -1,7 +1,8 @@
 backend:
   name: github
-  repo: jsvespera/js-vespera-website
+  repo: jsvespera/js-vespera-website  # Dein GitHub-Benutzername/Repository-Name
   branch: main
+  site_domain: jsvespera.de
 
 media_folder: "public/assets/images"
 public_folder: "/assets/images"

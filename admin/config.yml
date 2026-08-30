@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: jsvespera/js-vespera-website # Falls dein GitHub-Repository anders heißt, passe den Namen hier an
+  name: git-gateway
   branch: main
 
 media_folder: "assets/uploads"
@@ -81,3 +80,4 @@ collections:
               - {label: "Die Echtheit hinter dem Buch", name: "reality", widget: "text", required: false}
               - {label: "Triggerliste (eine Zeile pro Trigger)", name: "triggers", widget: "text", required: false}
               - {label: "Shop / Kauf-Link", name: "buy_link", widget: "string", required: false}
+

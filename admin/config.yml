@@ -16,100 +16,82 @@ collections:
         file: "content/site.json"
         format: "json"
         fields:
-          # ==========================================
-          # LOGO / NAVIGATION
-          # ==========================================
-          - {label: "--- LOGO & MENÜ (GANZ OBEN) ---", name: "div_nav", widget: "hidden", required: false}
-          - {label: "Logo Name (Aktuell: J.S. Vespera)", name: "brand_name", widget: "string", required: false}
+          # === LOGO / NAVIGATION ===
+          - {label: "--- 01. LOGO & MENÜ (GANZ OBEN) ---", name: "div_nav", widget: "hidden", required: false}
+          - {label: "01.1 Logo Name (Aktuell: J.S. Vespera)", name: "brand_name", widget: "string", required: false}
 
-          # ==========================================
-          # STARTSEITE 1: HERO
-          # ==========================================
-          - {label: "--- STARTSEITE: OBERSTER BEREICH (HERO) ---", name: "div_h1", widget: "hidden", required: false}
-          - {label: "Kleine Textzeile oben (Aktuell: J.S. Vespera)", name: "home_accent", widget: "string", required: false}
-          - {label: "Große Überschrift 1 (Aktuell: Gefährliche Worte.)", name: "home_title", widget: "string", required: false}
-          - {label: "Große Überschrift 2 (Aktuell: VERBOTENE WAHRHEITEN.)", name: "home_title_2", widget: "string", required: false}
-          - {label: "Einleitungstext", name: "home_lead", widget: "text", required: false}
-          - {label: "Button Text (Aktuell: ENTDECKE MEINE WELT)", name: "home_button_text", widget: "string", required: false}
-          - {label: "Hintergrundbild oben", name: "hero_image", widget: "image", required: false}
+          # === STARTSEITE 1: HERO ===
+          - {label: "--- 02. STARTSEITE: OBERSTER BEREICH (HERO) ---", name: "div_h1", widget: "hidden", required: false}
+          - {label: "02.1 Kleine Textzeile oben (Aktuell: J.S. Vespera)", name: "home_accent", widget: "string", required: false}
+          - {label: "02.2 Große Überschrift 1 (Aktuell: Gefährliche Worte.)", name: "home_title", widget: "string", required: false}
+          - {label: "02.3 Große Überschrift 2 (Aktuell: VERBOTENE WAHRHEITEN.)", name: "home_title_2", widget: "string", required: false}
+          - {label: "02.4 Einleitungstext", name: "home_lead", widget: "text", required: false}
+          - {label: "02.5 Button Text (Aktuell: ENTDECKE MEINE WELT)", name: "home_button_text", widget: "string", required: false}
+          - {label: "02.6 Hintergrundbild oben", name: "hero_image", widget: "image", required: false}
 
-          # ==========================================
-          # STARTSEITE 2: ÜBER MICH VORSCHAU
-          # ==========================================
-          - {label: "--- STARTSEITE: ÜBER MICH VORSCHAU-BEREICH ---", name: "div_h2", widget: "hidden", required: false}
-          - {label: "Foto links", name: "home_about_image", widget: "image", required: false}
-          - {label: "Kleine Zeile drüber (Aktuell: Über mich)", name: "home_about_subtitle", widget: "string", required: false}
-          - {label: "Große Überschrift (Aktuell: DIE WORTE HINTER DEN GESCHICHTEN.)", name: "home_about_title", widget: "string", required: false}
-          - {label: "Text Absatz 1", name: "home_about_p1", widget: "text", required: false}
-          - {label: "Text Absatz 2", name: "home_about_p2", widget: "text", required: false}
-          - {label: "Button (Aktuell: MEHR ÜBER MICH)", name: "home_about_btn", widget: "string", required: false}
+          # === STARTSEITE 2: ÜBER MICH VORSCHAU ===
+          - {label: "--- 03. STARTSEITE: ÜBER MICH VORSCHAU-BEREICH ---", name: "div_h2", widget: "hidden", required: false}
+          - {label: "03.1 Foto links", name: "home_about_image", widget: "image", required: false}
+          - {label: "03.2 Kleine Zeile drüber (Aktuell: Über mich)", name: "home_about_subtitle", widget: "string", required: false}
+          - {label: "03.3 Große Überschrift (Aktuell: DIE WORTE HINTER DEN GESCHICHTEN.)", name: "home_about_title", widget: "string", required: false}
+          - {label: "03.4 Text Absatz 1", name: "home_about_p1", widget: "text", required: false}
+          - {label: "03.5 Text Absatz 2", name: "home_about_p2", widget: "text", required: false}
+          - {label: "03.6 Button (Aktuell: MEHR ÜBER MICH)", name: "home_about_btn", widget: "string", required: false}
           
           # Die 4 Kacheln rechts
-          - {label: "Kachel 1 Titel (Aktuell: Gefährliche Liebe)", name: "feature_1_title", widget: "string", required: false}
-          - {label: "Kachel 1 Text", name: "feature_1_text", widget: "text", required: false}
-          - {label: "Kachel 2 Titel (Aktuell: Starke Heldinnen)", name: "feature_2_title", widget: "string", required: false}
-          - {label: "Kachel 2 Text", name: "feature_2_text", widget: "text", required: false}
-          - {label: "Kachel 3 Titel (Aktuell: Morally Grey)", name: "feature_3_title", widget: "string", required: false}
-          - {label: "Kachel 3 Text", name: "feature_3_text", widget: "text", required: false}
-          - {label: "Kachel 4 Titel (Aktuell: Dunkel. Intensiv.)", name: "feature_4_title", widget: "string", required: false}
-          - {label: "Kachel 4 Text", name: "feature_4_text", widget: "text", required: false}
+          - {label: "03.7 Kachel 1 Titel (Aktuell: Gefährliche Liebe)", name: "feature_1_title", widget: "string", required: false}
+          - {label: "03.8 Kachel 1 Text", name: "feature_1_text", widget: "text", required: false}
+          - {label: "03.9 Kachel 2 Titel (Aktuell: Starke Heldinnen)", name: "feature_2_title", widget: "string", required: false}
+          - {label: "03.10 Kachel 2 Text", name: "feature_2_text", widget: "text", required: false}
+          - {label: "03.11 Kachel 3 Titel (Aktuell: Morally Grey)", name: "feature_3_title", widget: "string", required: false}
+          - {label: "03.12 Kachel 3 Text", name: "feature_3_text", widget: "text", required: false}
+          - {label: "03.13 Kachel 4 Titel (Aktuell: Dunkel. Intensiv.)", name: "feature_4_title", widget: "string", required: false}
+          - {label: "03.14 Kachel 4 Text", name: "feature_4_text", widget: "text", required: false}
 
-          # ==========================================
-          # STARTSEITE 3: BÜCHER
-          # ==========================================
-          - {label: "--- STARTSEITE: BÜCHER BEREICH ---", name: "div_h3", widget: "hidden", required: false}
-          - {label: "Kleine Zeile links (Aktuell: Meine Bücher)", name: "books_sec_sub", widget: "string", required: false}
-          - {label: "Überschrift links (Aktuell: TAUCHE EIN IN MEINE WELT.)", name: "books_sec_title", widget: "string", required: false}
-          - {label: "Einleitungstext links", name: "books_sec_text", widget: "text", required: false}
-          
-          - {label: "Buch-Vorschau Badge (Aktuell: DEBÜTROMAN · DARK ROMANCE)", name: "home_book_badge", widget: "string", required: false}
-          - {label: "Buch-Vorschau Titel (Aktuell: DEADLY WORDS)", name: "home_book_title", widget: "string", required: false}
-          - {label: "Buch-Vorschau Teaser", name: "home_book_teaser", widget: "text", required: false}
-          - {label: "Buch-Vorschau Button (Aktuell: MEHR ZUM BUCH)", name: "home_book_btn", widget: "string", required: false}
-          - {label: "Buch-Vorschau Cover", name: "home_book_cover", widget: "image", required: false}
+          # === STARTSEITE 3: BÜCHER ===
+          - {label: "--- 04. STARTSEITE: BÜCHER BEREICH ---", name: "div_h3", widget: "hidden", required: false}
+          - {label: "04.1 Kleine Zeile links (Aktuell: Meine Bücher)", name: "books_sec_sub", widget: "string", required: false}
+          - {label: "04.2 Überschrift links (Aktuell: TAUCHE EIN IN MEINE WELT.)", name: "books_sec_title", widget: "string", required: false}
+          - {label: "04.3 Einleitungstext links", name: "books_sec_text", widget: "text", required: false}
+          - {label: "04.4 Buch-Vorschau Badge (Aktuell: DEBÜTROMAN DARK ROMANCE)", name: "home_book_badge", widget: "string", required: false}
+          - {label: "04.5 Buch-Vorschau Titel (Aktuell: DEADLY WORDS)", name: "home_book_title", widget: "string", required: false}
+          - {label: "04.6 Buch-Vorschau Teaser", name: "home_book_teaser", widget: "text", required: false}
+          - {label: "04.7 Buch-Vorschau Button (Aktuell: MEHR ZUM BUCH)", name: "home_book_btn", widget: "string", required: false}
+          - {label: "04.8 Buch-Vorschau Cover", name: "home_book_cover", widget: "image", required: false}
+          - {label: "04.9 Dunkler Zitat-Kasten (Aktuell: „Du lügst für die Toten...\")", name: "quote_box_text", widget: "text", required: false}
 
-          - {label: "Dunkler Zitat-Kasten (Aktuell: „Du lügst für die Toten...“)", name: "quote_box_text", widget: "text", required: false}
+          # === SEITE: ÜBER MICH ===
+          - {label: "--- 05. SEITE: ÜBER MICH ---", name: "div_p_about", widget: "hidden", required: false}
+          - {label: "05.1 Roter Kasten Badge (Aktuell: DIE AUTORIN)", name: "about_header_badge", widget: "string", required: false}
+          - {label: "05.2 Roter Kasten Titel (Aktuell: Über mich)", name: "about_title", widget: "string", required: false}
+          - {label: "05.3 Roter Kasten Einleitung", name: "about_intro", widget: "text", required: false}
+          - {label: "05.4 Autorenfoto links", name: "about_page_image", widget: "image", required: false}
+          - {label: "05.5 Überschrift (Aktuell: Wer hinter J.S. Vespera steckt)", name: "about_bio_title", widget: "string", required: false}
+          - {label: "05.6 Vorstellungstext", name: "about_story", widget: "text", required: false}
+          - {label: "05.7 Karte 1 Titel (Aktuell: Mein Weg zum Schreiben)", name: "card_1_title", widget: "string", required: false}
+          - {label: "05.8 Karte 1 Text", name: "card_1_text", widget: "text", required: false}
+          - {label: "05.9 Karte 2 Titel (Aktuell: Meine Inspiration)", name: "card_2_title", widget: "string", required: false}
+          - {label: "05.10 Karte 2 Text", name: "card_2_text", widget: "text", required: false}
+          - {label: "05.11 Karte 3 Titel (Aktuell: Dark Romance)", name: "card_3_title", widget: "string", required: false}
+          - {label: "05.12 Karte 3 Text", name: "card_3_text", widget: "text", required: false}
+          - {label: "05.13 Karte 4 Titel (Aktuell: Meine Bücher)", name: "card_4_title", widget: "string", required: false}
+          - {label: "05.14 Karte 4 Text", name: "card_4_text", widget: "text", required: false}
 
-          # ==========================================
-          # SEITE: ÜBER MICH
-          # ==========================================
-          - {label: "--- SEITE: ÜBER MICH ---", name: "div_p_about", widget: "hidden", required: false}
-          - {label: "Roter Kasten Badge (Aktuell: DIE AUTORIN)", name: "about_header_badge", widget: "string", required: false}
-          - {label: "Roter Kasten Titel (Aktuell: Über mich)", name: "about_title", widget: "string", required: false}
-          - {label: "Roter Kasten Einleitung", name: "about_intro", widget: "text", required: false}
-          
-          - {label: "Autorenfoto links", name: "about_page_image", widget: "image", required: false}
-          - {label: "Überschrift (Aktuell: Wer hinter J.S. Vespera steckt)", name: "about_bio_title", widget: "string", required: false}
-          - {label: "Vorstellungstext", name: "about_story", widget: "text", required: false}
+          # === SONSTIGES & FOOTER ===
+          - {label: "--- 06. UNTERSEITEN & FOOTER ---", name: "div_p_other", widget: "hidden", required: false}
+          - {label: "06.1 Testleser Überschrift", name: "beta_title", widget: "string", required: false}
+          - {label: "06.2 Testleser Text", name: "beta_body", widget: "text", required: false}
+          - {label: "06.3 Blogger Überschrift", name: "cooperation_title", widget: "string", required: false}
+          - {label: "06.4 Blogger Text", name: "cooperation_body", widget: "text", required: false}
+          - {label: "06.5 E-Mail-Adresse", name: "contact_email", widget: "string", required: false}
+          - {label: "06.6 Instagram URL", name: "instagram", widget: "string", required: false}
+          - {label: "06.7 Tik Tok URL", name: "tiktok", widget: "string", required: false}
+          - {label: "06.8 Copyright Zeile ganz unten", name: "footer_copyright", widget: "string", required: false}
 
-          - {label: "Karte 1 Titel (Aktuell: Mein Weg zum Schreiben)", name: "card_1_title", widget: "string", required: false}
-          - {label: "Karte 1 Text", name: "card_1_text", widget: "text", required: false}
-          - {label: "Karte 2 Titel (Aktuell: Meine Inspiration)", name: "card_2_title", widget: "string", required: false}
-          - {label: "Karte 2 Text", name: "card_2_text", widget: "text", required: false}
-          - {label: "Karte 3 Titel (Aktuell: Dark Romance)", name: "card_3_title", widget: "string", required: false}
-          - {label: "Karte 3 Text", name: "card_3_text", widget: "text", required: false}
-          - {label: "Karte 4 Titel (Aktuell: Meine Bücher)", name: "card_4_title", widget: "string", required: false}
-          - {label: "Karte 4 Text", name: "card_4_text", widget: "text", required: false}
-
-          # ==========================================
-          # SONSTIGES & FOOTER
-          # ==========================================
-          - {label: "--- UNTERSEITEN & FOOTER ---", name: "div_p_other", widget: "hidden", required: false}
-          - {label: "Testleser Überschrift", name: "beta_title", widget: "string", required: false}
-          - {label: "Testleser Text", name: "beta_body", widget: "text", required: false}
-          - {label: "Blogger Überschrift", name: "cooperation_title", widget: "string", required: false}
-          - {label: "Blogger Text", name: "cooperation_body", widget: "text", required: false}
-          - {label: "E-Mail-Adresse", name: "contact_email", widget: "string", required: false}
-          - {label: "Instagram URL", name: "instagram", widget: "string", required: false}
-          - {label: "TikTok URL", name: "tiktok", widget: "string", required: false}
-          - {label: "Copyright Zeile ganz unten", name: "footer_copyright", widget: "string", required: false}
-
-          # ==========================================
-          # RECHTLICHES
-          # ==========================================
-          - {label: "--- RECHTLICHES ---", name: "div_legal", widget: "hidden", required: false}
-          - {label: "Impressum", name: "impressum", widget: "markdown", required: false}
-          - {label: "Datenschutzerklärung", name: "privacy", widget: "markdown", required: false}
+          # === RECHTLICHES ===
+          - {label: "--- 07. RECHTLICHES ---", name: "div_legal", widget: "hidden", required: false}
+          - {label: "07.1 Impressum", name: "impressum", widget: "markdown", required: false}
+          - {label: "07.2 Datenschutzerklärung", name: "privacy", widget: "markdown", required: false}
 
   - name: "books_collection"
     label: "2. BÜCHER-DETAILSEITEN"
@@ -123,31 +105,31 @@ collections:
             name: "books"
             widget: "list"
             fields:
-              - {label: "=== SCREENSHOT 1: OBERER BEREICH DEINES BUCHES ===", name: "sb1", widget: "hidden", required: false}
-              - {label: "Roter Badge (Aktuell: DEBÜTROMAN · DARK ROMANCE)", name: "badge", widget: "string", required: false}
-              - {label: "Script-Zeile (Aktuell: Gefährliche Worte.)", name: "hook_line", widget: "string", required: false}
-              - {label: "Buchtitel (Aktuell: DEADLY WORDS)", name: "title", widget: "string"}
-              - {label: "Untertitel (Aktuell: Jedes Wort eine Lüge.)", name: "subtitle", widget: "string", required: false}
-              - {label: "Großes Zitat (Aktuell: DU LÜGST FÜR DIE TOTEN...)", name: "quote_text", widget: "text", required: false}
-              - {label: "Genre Tags (Aktuell: DARK ROMANCE, PSYCHOLOGISCH, 18+)", name: "header_tags", widget: "string", required: false}
-              - {label: "Cover-Bild", name: "cover", widget: "image", required: false}
-              - {label: "URL Kürzel (Aktuell: deadly-words)", name: "slug", widget: "string"}
+              - {label: "=== 01. OBERER BEREICH DEINES BUCHES ===", name: "sb1", widget: "hidden", required: false}
+              - {label: "01.1 Roter Badge (Aktuell: DEBÜTROMAN DARK ROMANCE)", name: "badge", widget: "string", required: false}
+              - {label: "01.2 Script-Zeile (Aktuell: Gefährliche Worte.)", name: "hook_line", widget: "string", required: false}
+              - {label: "01.3 Buchtitel (Aktuell: DEADLY WORDS)", name: "title", widget: "string"}
+              - {label: "01.4 Untertitel (Aktuell: Jedes Wort eine Lüge.)", name: "subtitle", widget: "string", required: false}
+              - {label: "01.5 Großes Zitat (Aktuell: DU LÜGST FÜR DIE TOTEN...)", name: "quote_text", widget: "text", required: false}
+              - {label: "01.6 Genre Tags (Aktuell: DARK ROMANCE, PSYCHOLOGISCH, 18+)", name: "header_tags", widget: "string", required: false}
+              - {label: "01.7 Cover-Bild", name: "cover", widget: "image", required: false}
+              - {label: "01.8 URL Kürzel (Aktuell: deadly-words)", name: "slug", widget: "string"}
 
-              - {label: "=== SCREENSHOT 2: INFOLEISTE & KLAPPENTEXT ===", name: "sb2", widget: "hidden", required: false}
-              - {label: "Genre (Aktuell: Dark Romance)", name: "genre", widget: "string", required: false}
-              - {label: "Status (Aktuell: In Überarbeitung / Testlesephase)", name: "status", widget: "string", required: false}
-              - {label: "Seitenanzahl (Aktuell: ca. 400 Seiten)", name: "pages", widget: "string", required: false}
-              - {label: "Erscheinungsdatum (Aktuell: Dezember 2026)", name: "release", widget: "string", required: false}
-              - {label: "Klappentext Einleitung (Aktuell: Ein verbotenes Spiel...)", name: "blurb_intro", widget: "string", required: false}
-              - {label: "Klappentext Haupttext", name: "blurb", widget: "text", required: false}
+              - {label: "=== 02. INFOLEISTE & KLAPPENTEXT ===", name: "sb2", widget: "hidden", required: false}
+              - {label: "02.1 Genre (Aktuell: Dark Romance)", name: "genre", widget: "string", required: false}
+              - {label: "02.2 Status (Aktuell: In Überarbeitung / Testlesephase)", name: "status", widget: "string", required: false}
+              - {label: "02.3 Seitenanzahl (Aktuell: ca. 400 Seiten)", name: "pages", widget: "string", required: false}
+              - {label: "02.4 Erscheinungsdatum (Aktuell: Dezember 2026)", name: "release", widget: "string", required: false}
+              - {label: "02.5 Klappentext Einleitung (Aktuell: Ein verbotenes Spiel...)", name: "blurb_intro", widget: "string", required: false}
+              - {label: "02.6 Klappentext Haupttext", name: "blurb", widget: "text", required: false}
 
-              - {label: "=== SCREENSHOT 3: TROPES & ECHTHEIT ===", name: "sb3", widget: "hidden", required: false}
-              - {label: "Tropes Kacheln (Aktuell: DARK ROMANCE, OBSESSION...)", name: "tropes_list", widget: "string", required: false}
-              - {label: "Tropes Hinweis", name: "tropes_text", widget: "text", required: false}
-              - {label: "Echtheit Untertitel (Aktuell: Was ist echt? Was ist inspiriert?)", name: "reality_subtitle", widget: "string", required: false}
-              - {label: "Echtheit Haupttext", name: "reality", widget: "text", required: false}
+              - {label: "=== 03. TROPES & ECHTHEIT ===", name: "sb3", widget: "hidden", required: false}
+              - {label: "03.1 Tropes Kacheln (Aktuell: DARK ROMANCE, OBSESSION...)", name: "tropes_list", widget: "string", required: false}
+              - {label: "03.2 Tropes Hinweis", name: "tropes_text", widget: "text", required: false}
+              - {label: "03.3 Echtheit Untertitel (Aktuell: Was ist echt? Was ist inspiriert?)", name: "reality_subtitle", widget: "string", required: false}
+              - {label: "03.4 Echtheit Haupttext", name: "reality", widget: "text", required: false}
 
-              - {label: "=== TRIGGERWARNUNGEN & KAUFLINKS ===", name: "sb4", widget: "hidden", required: false}
-              - {label: "Triggerwarnungen (eine pro Zeile)", name: "triggers", widget: "text", required: false}
-              - {label: "Leseprobe Link", name: "sample_link", widget: "string", required: false}
-              - {label: "Kauf-Link (Shop)", name: "buy_link", widget: "string", required: false}
+              - {label: "=== 04. TRIGGERWARNUNGEN & KAUFLINKS ===", name: "sb4", widget: "hidden", required: false}
+              - {label: "04.1 Triggerwarnungen (eine pro Zeile)", name: "triggers", widget: "text", required: false}
+              - {label: "04.2 Leseprobe Link", name: "sample_link", widget: "string", required: false}
+              - {label: "04.3 Kauf-Link (Shop)", name: "buy_link", widget: "string", required: false}

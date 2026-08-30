@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: jsvespera/js-vespera-website
   branch: main
 
 media_folder: "public/assets/images"

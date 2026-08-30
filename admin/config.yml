@@ -103,5 +103,5 @@ collections:
           - {label: "11.1 Triggerliste Überschrift", name: "trigger_title", widget: "string", required: false}
           - {label: "11.2 Triggerliste Inhalt", name: "trigger_text", widget: "markdown", required: false}
           - {label: "11.3 Leseprobe Überschrift", name: "sample_title", widget: "string", required: false}
-          - {label: "11.4 Leseprobe Text / Beschreibung", name: "sample_text", widget: "markdown", required: false}
-          - {label: "11.5 Leseprobe PDF Datei hochladen", name: "sample_pdf", widget: "file", required: false}
+          - {label: "11.4 Leseprobe Beschreibungstext", name: "sample_text", widget: "markdown", required: false}
+          - {label: "11.5 LESEPROBE PDF DATEI HOCHLADEN", name: "sample_file", widget: "file", required: false}
